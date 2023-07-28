@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>CookieStand: {{ cookie.name }}</h1>
+  <p>Description: {{ cookie.description }}</p>
+  <p>Owner: {{ cookie.owner }}
+  <p><a href="{% url 'update_view' cookie.pk %}">Update CookieStand</a></p>
+  <p><a href="{% url 'delete_view' cookie.pk %}">Delete CookieStand</a></p>
+
+{% endblock content %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>CookieStand List</h1>
+  {% for cookie in cookie %}
+    <p><a href="{% url 'detail_view' cookie.pk %}">{{ cookie.name }}</a></p>
+  {% endfor %}
+{% endblock content %}
